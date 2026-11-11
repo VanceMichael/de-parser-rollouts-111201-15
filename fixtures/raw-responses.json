@@ -1,0 +1,30 @@
+{
+  "responses": [
+    {
+      "id": "r1",
+      "value": 10,
+      "unit": "m"
+    },
+    {
+      "id": "r2",
+      "value": 2,
+      "unit": "km"
+    },
+    {
+      "id": "r3",
+      "value": "异常",
+      "unit": "m"
+    }
+  ],
+  "arrivals_during_replay": [
+    {
+      "id": "r4",
+      "value": 12,
+      "unit": "m"
+    }
+  ],
+  "interruptions": [
+    "after_shadow_write",
+    "before_switch"
+  ]
+}

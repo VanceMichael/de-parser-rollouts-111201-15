@@ -1,0 +1,19 @@
+{
+  "v1": {
+    "fields": [
+      "id",
+      "value",
+      "unit"
+    ]
+  },
+  "v2": {
+    "fields": [
+      "id",
+      "value_m"
+    ],
+    "accepted_units": [
+      "m",
+      "km"
+    ]
+  }
+}

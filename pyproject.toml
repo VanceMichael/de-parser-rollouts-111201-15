@@ -1,0 +1,6 @@
+[project]
+name = "parser-rollouts"
+version = "0.1.0"
+description = "本地数据采集与来源凭据"
+requires-python = ">=3.11"
+dependencies = []
