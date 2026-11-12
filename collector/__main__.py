@@ -10,14 +10,20 @@ from .transport import Client, replay_server
 
 def main():
     parser = argparse.ArgumentParser(description='本地采集与凭据查看')
-    parser.add_argument('command', choices=['demo', 'import', 'show', 'serve'])
+    parser.add_argument('command',
+                        choices=['demo', 'import', 'show', 'serve', 'rollout-demo'])
     parser.add_argument('--input', default='fixtures/sample.json')
     parser.add_argument('--db', default='var/records.sqlite3')
     parser.add_argument('--port', type=int, default=8080)
+    parser.add_argument('--fixtures', default='fixtures')
     arguments = parser.parse_args()
     if arguments.command == 'serve':
         from .api import serve
         serve(arguments.db, arguments.port)
+        return
+    if arguments.command == 'rollout-demo':
+        from .rollout_demo import run_demo
+        run_demo(arguments.fixtures)
         return
     if arguments.command == 'demo':
         with tempfile.TemporaryDirectory() as directory:
